@@ -1,2 +1,3 @@
-﻿  read_file.cpp
-  poly_clip.vcxproj -> C:\Users\Public\Sebastian\Studium\Master\2_Semester\Cpp_Rebecca\poly_clip\poly_clip\Debug\poly_clip.exe
+﻿  poly_clip.cpp
+c:\users\public\sebastian\studium\master\2_semester\cpp_rebecca\poly_clip\poly_clip\poly_clip\poly_clip.cpp(22): error C2275: 'point_3d': illegal use of this type as an expression
+  c:\users\public\sebastian\studium\master\2_semester\cpp_rebecca\poly_clip\poly_clip\poly_clip\point_3d.hpp(9): note: see declaration of 'point_3d'

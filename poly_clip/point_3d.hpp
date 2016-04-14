@@ -10,12 +10,15 @@ class point_3d
 
 //############################### private ###############################//
 private:
+	//definition of all dataelements
 	double x_value;
 	double y_value;
 	double z_value;
 
 //############################### public ###############################//
 public:
+	//definition of the different functions
+
 	//get functions
 	double Get_x_value() { return x_value; }
 	double Get_y_value() { return y_value; }

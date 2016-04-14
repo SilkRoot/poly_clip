@@ -15,6 +15,8 @@ int read_file(char FILENAME[]) {
 	double dump2;
 	double dump3;
 
+	vector<vector<point_3d> > data_storage;//multidimensional vector
+
 
 
 	//############################### open file ###############################//
@@ -35,6 +37,7 @@ int read_file(char FILENAME[]) {
 	for (int i = 0; i < nr_poly; i++) {//looping trough polygons
 		file >> nr_points;
 		cout << "number of points in this polygon:  " << nr_points << endl;//control print to console
+
 		for (int j = 0; j < nr_points; j++) {//looping trough points of this polygon
 			file >> dump1;
 			cout << j << " x value: " << dump1 << endl;//control print to console
@@ -42,25 +45,27 @@ int read_file(char FILENAME[]) {
 			cout << j << " y value: " << dump2 << endl;//control print to console
 			dump3 = 0;
 			cout << j << " z value: " << dump3 << endl;//control print to console
-			point_3d.set_x_value(dump1);
+			point_3d(dump1, dump2, dump3) = data_storage[i][j];
+			
 		}//point loop
 	}//polygon loop
 
+	cout << endl << "########################################" << endl <<endl;//separating print to console
+	
+	cout << "controlprint of the data_storage vector" << endl;//control print to console
 
-	/*
-	//multi-dimensional array example
-	for (int i = 0; i < 10; i++) {
-		vector<int> row; // Create an empty row
-		for (int j = 0; j < 20; j++) {
-			row.push_back(i * j); // Add an element (column) to the row
+	for (int i = 0; i < data_storage.size(); i++)
+	{
+		for (int j = 0; j < data_storage[i].size(); j++)
+		{
+			data_storage[i][j];
 		}
-		polygons.push_back(row); // Add the row to the main vector
-	}*/
-
+	}
 
 
 	cout << "function read_file is finished" << endl;//control print to console
 	cout << endl << "########################################" << endl;//separating print to console
+	
 	return 0;
 }
 #endif read_file_cpp
